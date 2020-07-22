@@ -69,3 +69,21 @@ body {
   white-space: nowrap;
   line-height: 60px; /* Vertically center the text there */
 }
+
+/* START - Pagination for Tiny Slider */
+.tns-nav > [aria-controls] {
+  display: none;
+  width: 9px;
+  height: 9px;
+  padding: 0;
+  margin: 0 5px;
+  border-radius: 50%;
+  background: #ddd;
+  border: 0;
+}
+
+.tns-nav > .tns-nav-active {
+  display: none;
+  background: #999;
+}
+/* END - Pagination for Tiny Slider */

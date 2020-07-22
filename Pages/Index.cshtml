@@ -4,7 +4,7 @@
     ViewData["Title"] = "Home page";
 }
 
-<div style="background-size: 100%; background-image: url('/images/Header.gif'); background-repeat: no-repeat; background-attachment: fixed;" class="jumbotron jumbotron-fluid text-white mb-0">
+<div style="background-size: 100%; background-image: url('/images/Header.gif'); background-repeat: repeat-y; background-attachment: fixed;" class="jumbotron jumbotron-fluid text-white mb-0">
     <div class="container" style="background: rgba(0,0,0,0.6); height: 20rem;">
         <h1 class="display-3">Wesley Couturier</h1>
         <p class="lead">Front-End Developer</p>
@@ -45,73 +45,21 @@
             </a>
         </div>
         <div class="col-sm-12 col-md-9 col-lg-6 container" style="position: relative;">
-            <img class="img-fluid" src="/images/woman-sitting-holding-silver-macbook-1181667.jpg">
+            <img class="img-fluid" src="/images/woman-with-laptop.jpg">
             <p class="h2 text-white w-85 h-50 p-3 d-flex justify-content-center align-items-center" style="position: absolute; top:25%; left:5%; background: rgba(15,0,35,0.7);"> You need your website<br /> done right!</p>
         </div>
     </div>
 </div>
 
-<div class="container-fluid">
-    <div id="carouselExample" class="carousel slide" data-ride="carousel" data-interval="9000">
-        <div class="carousel-inner row w-100 mx-auto" role="listbox">
-            <div class="carousel-item col-md-3 active">
-                <img class="img-fluid mx-auto d-block" src="//placehold.it/600x400/000/fff?text=1" alt="slide 1">
-            </div>
-            <div class="carousel-item col-md-3">
-                <img class="img-fluid mx-auto d-block" src="//placehold.it/600x400?text=2" alt="slide 2">
-            </div>
-            <div class="carousel-item col-md-3">
-                <img class="img-fluid mx-auto d-block" src="//placehold.it/600x400?text=3" alt="slide 3">
-            </div>
-            <div class="carousel-item col-md-3">
-                <img class="img-fluid mx-auto d-block" src="//placehold.it/600x400?text=4" alt="slide 4">
-            </div>
-            <div class="carousel-item col-md-3">
-                <img class="img-fluid mx-auto d-block" src="//placehold.it/600x400?text=5" alt="slide 5">
-            </div>
-            <div class="carousel-item col-md-3">
-                <img class="img-fluid mx-auto d-block" src="//placehold.it/600x400?text=6" alt="slide 6">
-            </div>
-            <div class="carousel-item col-md-3">
-                <img class="img-fluid mx-auto d-block" src="//placehold.it/600x400?text=7" alt="slide 7">
-            </div>
-            <div class="carousel-item col-md-3">
-                <img class="img-fluid mx-auto d-block" src="//placehold.it/600x400?text=8" alt="slide 7">
-            </div>
-        </div>
-        <a class="carousel-control-prev" href="#carouselExample" role="button" data-slide="prev">
-            <i class="fa fa-chevron-left fa-lg text-muted"></i>
-            <span class="sr-only">Previous</span>
-        </a>
-        <a class="carousel-control-next text-faded" href="#carouselExample" role="button" data-slide="next">
-            <i class="fa fa-chevron-right fa-lg text-muted"></i>
-            <span class="sr-only">Next</span>
-        </a>
-    </div>
-</div>
-
-<div class="container-fluid">
+<div id="carouselContainer" class="container-fluid w-75">
     <div class="pl-3 py-2 mt-2">
         <p class="h4">Below are some of the tools I use:</p>
     </div>
-    <div class="row">
-            <div class="col-sm-6 col-md-6 col-lg-3">
-                <a href="https://getbootstrap.com/" rel="no-follow" ><img class="img-fluid" src="/images/bootstrap-4-logo.png" alt="Bootstrap 4 Logo"></a>
-            </div>
-            <div class="col-sm-6 col-md-6 col-lg-3">
-                <a href="https://dotnet.microsoft.com/download" rel="no-follow" >
-                <img class="img-fluid" src="/images/aspnetcorelogo.jpg" alt="ASP.NET Core Logo">
-                </a>
-            </div>
-            <div class="col-sm-6 col-md-6 col-lg-3">
-                <a href="" rel="no-follow" >
-                <img class="img-fluid" src="/images/Sass.svg" alt="Sass logo">
-                </a>
-            </div>
-            <div class="col-sm-6 col-md-6 col-lg-3">
-                <a href="" rel="no-follow" >
-                <img class="img-fluid" src="/images/angular-js.png" alt="Angular JS logo">
-                </a>
-            </div>
-        </div>
+    <div id="responsive" class="container">
+        <div><a href="https://getbootstrap.com/" ><img class="img-fluid" src="/images/Bootstrap-4-Logo.png" alt="Bootstrap 4 Logo" /></a></div>
+        <div><a href="https://www.lightspeedhq.com/" ><img class="img-fluid" src="/images/Lightspeed-Logo.png" alt="Lightspeed Logo" /></a></div>
+        <div><a href="https://dotnet.microsoft.com/apps/aspnet" ><img class="img-fluid" src="/images/ASPNETCore-Logo.jpg" alt="ASP.NET Core Logo" /></a></div>
+        <div><a href="https://www.3dcart.com/"><img class="img-fluid" src="/images/3dcart-Logo.svg" alt="3D Cart Logo"/></a></div>
+        <div><a href="https://wordpress.com/"><img class="img-fluid" src="/images/WordPress-Logo.png" alt="Wordpress Logo"/></a></div>
+    </div>
 </div>

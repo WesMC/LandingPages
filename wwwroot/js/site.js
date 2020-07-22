@@ -3,23 +3,50 @@
 
 // Write your JavaScript code.
 
-$('#carouselExample').on('slide.bs.carousel', function (e) {
+var slider = tns({
+    "items": 2.2,
+    "controls": false,
+    "center": false,
+    "controlsContainer": false,
+    "controlsPosition": "bottom",
+    "autoplay": true,
+    "autoplayButtonOutput": false,
+    "fixedWidth": 150,
+    "edgePadding": 25,
+    "gutter": 15,
+    "responsive": {
+      "350": {
+        "items": 3
+      },
+      "500": {
+        "items": 2,
+        "fixedWidth": 225,
+      },
+      "900": {
+        "items": 4,
+        "gutter": 40,
+        "edgePadding": 100,
+        "fixedWidth": 250,
+        "center": true
+      }
+    },
+    "container": "#responsive",
+    "swipeAngle": false,
+    "speed": 1000,
+    "autoplayTimeout": 3000
+  });
 
-    var $e = $(e.relatedTarget);
-    var idx = $e.index();
-    var itemsPerSlide = 3;
-    var totalItems = $('.carousel-item').length;
-    
-    if (idx >= totalItems-(itemsPerSlide-1)) {
-        var it = itemsPerSlide - (totalItems - idx);
-        for (var i=0; i<it; i++) {
-            // append slides to end
-            if (e.direction=="left") {
-                $('.carousel-item').eq(i).appendTo('.carousel-inner');
-            }
-            else {
-                $('.carousel-item').eq(0).appendTo('.carousel-inner');
-            }
-        }
+  function CarouselContainerResize() {
+    if($(window).width() > 500) {
+        $('#carouselContainer').addClass("w-75");
     }
-});
+    else {$('#carouselContainer').removeClass("w-75");}
+  }
+
+  $(document).ready( function () {
+
+      // Check if Carousel needs to be resized
+      $(window).resize(CarouselContainerResize);
+      CarouselContainerResize();
+      
+  });
