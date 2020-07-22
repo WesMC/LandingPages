@@ -4,36 +4,38 @@
 // Write your JavaScript code.
 
 var slider = tns({
-    "items": 2.2,
+    "items": 2,
     "controls": false,
-    "center": false,
+    "center": true,
     "controlsContainer": false,
     "controlsPosition": "bottom",
     "autoplay": true,
     "autoplayButtonOutput": false,
-    "fixedWidth": 150,
-    "edgePadding": 25,
-    "gutter": 15,
+    "fixedWidth": 200,
+    "edgePadding": 15,
+    "gutter": 85,
     "responsive": {
-      "350": {
-        "items": 3
-      },
       "500": {
+        "center": false,
         "items": 2,
-        "fixedWidth": 225,
+        "fixedWidth": 220,
+        "gutter": 15,
+        "edgePadding": 0,
+        "autoplayTimeout": 3000
       },
       "900": {
         "items": 4,
         "gutter": 40,
         "edgePadding": 100,
         "fixedWidth": 250,
-        "center": true
+        "center": true,
+        "autoplayTimeout": 3000
       }
     },
     "container": "#responsive",
     "swipeAngle": false,
     "speed": 1000,
-    "autoplayTimeout": 3000
+    "autoplayTimeout": 4000
   });
 
   function CarouselContainerResize() {
@@ -48,5 +50,5 @@ var slider = tns({
       // Check if Carousel needs to be resized
       $(window).resize(CarouselContainerResize);
       CarouselContainerResize();
-      
+
   });
